@@ -18,5 +18,46 @@ body {
 }
 
 .container {
+  align-items: center;
   background-color: var(--background-light-theme);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: calc(100% - 50px);
+  justify-content: center;
+  padding: 10px;
+}
+
+.container p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 0 15px;
+}
+
+.container > p > span {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.special-span {
+  align-self: center;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+.underline-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #2645f7, #f2040a, #f5e304, #1dc2e7);
 }
