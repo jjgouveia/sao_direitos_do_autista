@@ -2,6 +2,12 @@
   --background-light-theme: #f5f5f5;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("../assets/Poppins.ttf") format("truetype");
@@ -15,17 +21,17 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-light-theme);
 }
 
 .container {
-  align-items: center;
-  background-color: var(--background-light-theme);
-  display: flex;
-  flex-direction: column;
   text-align: center;
   gap: 10px;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 10px;
 }
@@ -45,6 +51,12 @@ body {
   justify-content: center;
 }
 
+.container img {
+  margin-top: 4rem;
+  width: 120px;
+  height: 120px;
+}
+
 .special-span {
   align-self: center;
   text-decoration: none;
@@ -60,4 +72,96 @@ body {
   width: 100%;
   height: 2px;
   background: linear-gradient(to right, #2645f7, #f2040a, #f5e304, #1dc2e7);
+}
+
+.rights-container {
+  height: 3rem;
+  overflow: hidden;
+}
+
+.rights {
+  display: flex;
+  flex-direction: column;
+  animation: change 28s linear infinite alternate;
+  align-items: center;
+  justify-content: center;
+}
+
+.rights span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 3rem;
+}
+
+@keyframes change {
+  0%,
+  9% {
+    transform: translate3d(0, 0rem, 0);
+  }
+  9.5%,
+  18% {
+    transform: translate3d(0, -3rem, 0);
+  }
+  18.5%,
+  27% {
+    transform: translate3d(0, -6rem, 0);
+  }
+  27.5%,
+  36% {
+    transform: translate3d(0, -9rem, 0);
+  }
+  36.5%,
+  45% {
+    transform: translate3d(0, -12rem, 0);
+  }
+  45.5%,
+  54% {
+    transform: translate3d(0, -15rem, 0);
+  }
+  54.5%,
+  63% {
+    transform: translate3d(0, -18rem, 0);
+  }
+  63.5%,
+  70% {
+    transform: translate3d(0, -21rem, 0);
+  }
+  70.5%,
+  80% {
+    transform: translate3d(0, -24rem, 0);
+  }
+  80.5%,
+  90% {
+    transform: translate3d(0, -27rem, 0);
+  }
+  90.5%,
+  100% {
+    transform: translate3d(0, -30rem, 0);
+  }
+}
+
+.social {
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+@media (max-width: 400px) {
+  .rights-container {
+    margin-top: 0.5rem;
+    height: 3.1rem;
+  }
+
+  .rights span {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  .rights .large-text {
+    font-size: 1rem;
+  }
 }
