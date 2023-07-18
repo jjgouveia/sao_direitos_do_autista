@@ -40,7 +40,7 @@ body {
   padding: 10px;
 }
 
-.container p {
+.container h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -50,7 +50,7 @@ body {
   padding: 0 15px;
 }
 
-.container > p > span {
+.container > h1 > span {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -200,9 +200,6 @@ body {
   );
 }
 
-.social a:hover {
-  font-weight: bold;
-}
 .social a:hover::after {
   width: 100%;
 }
